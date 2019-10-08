@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var tag = document.createElement('script');
+        tag.id = 'iframe-demo';
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+        function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+        videoId: 'CAo9pr9quWs',
+      height: '700px',
+      width: '100%',
+      playerVars:{
+        'autoplay': 1,
+                'controls': 1,
+                'showinfo': 0,
+                'modestbranding': 0,
+                'loop': 1,
+                'fs': 0,
+                'cc_load_policty': 0,
+                'iv_load_policy': 3,
+                'rel': 0
+      }
+    });
+  }
+    </script>
+</head>
+    <body>
+       <div id ='ytplayer'></div>
+    </body>
+</html>
