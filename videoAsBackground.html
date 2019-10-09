@@ -31,9 +31,15 @@
               'theme': 'light', 
               'rel':0  ,
               'playlist': 'CAo9pr9quWs'
-      }
+      },
+      events: {
+            'onReady': onPlayerReady,
+          }
     });
   }
+  function onPlayerReady(event) {
+        event.target.playVideo();
+      }
     </script>
     <style>
         .infoBar{
