@@ -1,5 +1,32 @@
-<iframe tabindex="1" title="Synchrony Pillars Project Video" class="tw-absolute tw-inset-0
- tw-w-full tw-h-full" width="1907" height="552"
-  src="https://www.youtube.com/embed/CAo9pr9quWs?autoplay=1&amp;controls=0&amp;
-  autohide=1&amp;enablejsapi=1&amp;loop=1&amp;disablekb=1&amp;fs=0&amp;modestbranding=0&amp;rel=0&amp;
-  videoid=CAo9pr9quWs&amp;playlist=CAo9pr9quWs;origin=https://qwww.mysynchrony.com;widgetid=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  <script>
+        var player;
+        function onYouTubePlayerAPIReady() {
+            var element = document.getElementById('pillar-iframe-container');
+    player = new YT.Player('element', {
+        videoId: 'CAo9pr9quWs', 
+      height: '100%',
+      width: '100%',
+      playerVars:{
+        'autoplay': 1, 
+              'controls': 0,
+              'autohide':1,
+              'enablejsapi':1,
+              'loop':1, 
+              'disablekb':1, 
+              'fs': 0, 
+              'modestbranding': 0, 
+              'rel':0  ,
+              'playlist': 'CAo9pr9quWs',
+              'videoId': 'CAo9pr9quWs'
+      },
+      events: {
+            'onReady': onPlayerReady,
+          }
+    });
+  }
+
+  function onPlayerReady(event) {
+        player.playVideo();
+      }
+
+    </script>
